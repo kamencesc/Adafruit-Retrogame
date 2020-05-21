@@ -775,7 +775,8 @@ static void pinConfigLoad() {
 	      // Each MCP23017 is assigned a separate file descriptor;
 	      // each bonded once to a specific I2C address (via ioctl)
 	      // so that the ioctl isn't required for every transaction.
-	      if((i2cfd[i] = open("/dev/i2c-1", O_RDWR | O_NONBLOCK)) > 0) {
+	      // Changed to /dev/i2c-0
+	      if((i2cfd[i] = open("/dev/i2c-0", O_RDWR | O_NONBLOCK)) > 0) {
 	        ioctl(i2cfd[i], I2C_SLAVE, 0x20 + i);
 	        // Configure chip as we need it (sequential addr, etc.).
 	        // This does mean any other application also using the
