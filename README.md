@@ -1,4 +1,4 @@
-Adafruit-Retrogame
+Adafruit-Retrogame (I2C Bus 0)
 ==================
 
 Raspberry Pi GPIO-to-virtual-keyboard utility for classic game emulators.
